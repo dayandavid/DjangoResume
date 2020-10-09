@@ -1,0 +1,5 @@
+.vscode/
+CAMBoyerosApp/__pycache__/
+CAMBoyeros/__pycache__/
+static/upload/
+*.pyc
