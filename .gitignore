@@ -3,3 +3,4 @@ DjangoTestingApp/__pycache__/
 DjangoTestingProject/__pycache__/
 static/upload/
 *.pyc
+uploads/
