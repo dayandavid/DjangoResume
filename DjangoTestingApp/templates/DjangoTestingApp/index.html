@@ -48,6 +48,7 @@
                 </div>
                 <p class="lead mb-5">{{profile.description}}</p>
                 <div class="social-icons">
+                    <!--Social Links-->
                     {% for social in social_links %}
                         <a href="{{social.url}}" class="social-icon"><i class="fab fa-{{social.name}}"></i></a>
                     {% endfor %}
@@ -60,14 +61,16 @@
             <div class="resume-section-content">
                 <h2 class="mb-5">Experiencia</h2>
                 <!--Experiencias laborales-->
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Web Developer</h3>
-                        <div class="subheading mb-3">InfoCAP</div>
-                        <p>Desarrollando soluciones informaticas para implementar la estrategia para la informatizacion de la sociedad. Se crean soluciones robustas para afrontar las nuevas tecnologias de una forma segura y moderna</p>
+                {% for job_experience in job_experiences %}
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">{{job_experience.job_position}}</h3>
+                            <div class="subheading mb-3">{{job_experience.company_name}}</div>
+                            <p>{{job_experience.company_description}}</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">{{job_experience.start_date}} - {{job_experience.get_end_date}}</span></div>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">2020 - Present</span></div>
-                </div>
+                {% endfor %}
             </div>
         </section>
         <hr class="m-0">
@@ -132,49 +135,6 @@
                 <p>Ademas de ser un desarrollador de software tambien disfruto haciendo otras actividades. Disfruto leer libros en la tranquilidad de mi casa, atender a mis mascotas y plantas y beber un buen vino.</p>
                 <p class="mb-0">Tambien disfruto de cocinar, ver peliculas de fantasia y navegar en Reddit.</p>
             </div>
-        </section>
-        <!-- Skills-->
-        <section class="resume-section" id="skills">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Skills</h2>
-                <div class="subheading mb-3">Programming Languages & Tools</div>
-                <ul class="list-inline dev-icons">
-                    <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-angular"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-npm"></i></li>
-                </ul>
-                <div class="subheading mb-3">Workflow</div>
-                <ul class="fa-ul mb-0">
-                    <li>
-                        <span class="fa-li"><i class="fas fa-check"></i></span>
-                        Mobile-First, Responsive Design
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-check"></i></span>
-                        Cross Browser Testing & Debugging
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-check"></i></span>
-                        Cross Functional Teams
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-check"></i></span>
-                        Agile Development & Scrum
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <hr class="m-0" />
-        <!-- Interests-->
-        <section class="resume-section" id="interests">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Interests</h2>
-                    <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-                    <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
-                </div>
         </section>
     </div>
     <!-- Javascripts imports -->
