@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class JobPosition(models.Model):
     """
     A model that describes a job position in a company.
@@ -26,6 +27,15 @@ class JobExperience(models.Model):
     
     def __str__(self):
         return self.company_name
+    
+    def get_end_date(self):
+        """
+        If the end date is null is because is the current job.
+        """
+        if not self.end_date:
+            return 'Presente'
+        else:
+            return self.end_date
 
 
 class Profile(models.Model):
