@@ -48,6 +48,7 @@ class Profile(models.Model):
     email = models.EmailField(max_length=254)
     description = models.TextField()
     profile_pic = models.ImageField(upload_to='profileImages', height_field=None, width_field=None, max_length=None, verbose_name='Profile Picture')
+    interest = models.TextField()
     
     def __str__(self):
         return self.first_name
