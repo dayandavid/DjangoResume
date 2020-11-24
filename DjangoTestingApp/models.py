@@ -9,7 +9,6 @@ class JobPosition(models.Model):
     
     def __str__(self):
         return self.position_name
-    
 
 
 class JobExperience(models.Model):
