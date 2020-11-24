@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'DjangoTestingProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'resumeDb',
+        'NAME': 'djangoResume',
         'USER': 'postgres',
         'PASSWORD': '93070223627',
         'HOST': '127.0.0.1',
