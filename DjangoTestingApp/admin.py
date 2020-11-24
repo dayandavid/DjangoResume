@@ -13,7 +13,7 @@ class ProfileAdmin(admin.ModelAdmin):
     fieldsets = (
         ('User Description', {
             "fields": (
-                ['first_name', 'last_name','description', 'profile_pic']
+                ['first_name', 'last_name','description', 'interest','profile_pic']
             ),
         }),
         ('Personal Information', {
