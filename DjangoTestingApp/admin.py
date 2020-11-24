@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import JobExperience, JobPosition, SocialLink, Profile
+from .models import JobExperience, JobPosition, SocialLink, Profile, Education
 
 admin.site.register(JobPosition)
 
@@ -38,3 +38,16 @@ class JobExperienceAdmin(admin.ModelAdmin):
     
     list_display = ('company_name','job_position', 'start_date', 'end_date', 'current_company')
     list_filter = ['job_position']
+
+
+@admin.register(Education)
+class EducationAdmin(admin.ModelAdmin):
+    fieldsets = (
+        (None, {
+            "fields": (
+                ['education_center_name', 'course_name', 'especialty', 'average_grades', ('start_date', 'end_date'), ]
+            ),
+        }),
+    )
+    
+    list_display = ('course_name', 'average_grades') 
