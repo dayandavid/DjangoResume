@@ -60,6 +60,7 @@ class SocialLink(models.Model):
     """
     name = models.CharField(max_length=50)
     url = models.URLField(max_length=200)
+    icon = models.CharField( verbose_name='Font Awesome Icon', max_length=50)
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
     
     def __str__(self):
