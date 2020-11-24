@@ -32,7 +32,7 @@ class JobExperience(models.Model):
         """
         If the end date is null is because is the current job.
         """
-        if not self.end_date:
+        if self.current_company:
             return 'Presente'
         else:
             return self.end_date
