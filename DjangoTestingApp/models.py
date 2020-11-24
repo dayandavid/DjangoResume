@@ -65,3 +65,18 @@ class SocialLink(models.Model):
     
     def __str__(self):
         return self.name
+
+
+class Education(models.Model):
+    """
+    A model that describes the education of the user
+    """
+    education_center_name = models.CharField(verbose_name='centro de estudios' ,max_length=50)
+    course_name = models.CharField( verbose_name='curso', max_length=50)
+    especialty = models.CharField(verbose_name='especialidad', max_length=50)
+    average_grades = models.FloatField(verbose_name='promedio')
+    start_date = models.DateField(verbose_name='fecha de inicio', auto_now=False, auto_now_add=False)
+    end_date = models.DateField(verbose_name='fecha de fin', auto_now=False, auto_now_add=False)
+    
+    def __str__(self):
+        return self.course_name
