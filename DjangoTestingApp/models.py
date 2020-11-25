@@ -87,7 +87,7 @@ class Skill(models.Model):
     A model that describes a skill and selects an icon for the skill
     """
     skill_name = models.CharField(verbose_name='habilidad', max_length=50)
-    skill_icon = models.CharField(max_length=50)
+    skill_icon = models.CharField(verbose_name='Icono Font Awesome',max_length=50)
 
 
 class Workflow(models.Model):
