@@ -104,18 +104,12 @@
                 </ul>
                 <div class="subheading mb-3">Flujo de Trabajo</div>
                 <ul class="fa-ul mb-0">
-                    <li>
-                        <span class="fa-li"><i class="fas fa-check"></i></span>
-                        Diseño Responsive
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-check"></i></span>
-                        Desarrollo Agil y Scrum
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-check"></i></span>
-                        Diseño Orientado a Pruebas
-                    </li>
+                    {% for workflow in workflows %}
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            {{workflow.workflow_name}}
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
         </section>
