@@ -1,8 +1,10 @@
 from django.contrib import admin
 
-from .models import JobExperience, JobPosition, SocialLink, Profile, Education
+from .models import JobExperience, JobPosition, SocialLink, Profile, Education, Skill, Workflow
 
 admin.site.register(JobPosition)
+admin.site.register(Skill)
+admin.site.register(Workflow)
 
 class SocialLinkInline(admin.TabularInline):
     model = SocialLink
