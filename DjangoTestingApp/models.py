@@ -88,6 +88,9 @@ class Skill(models.Model):
     """
     skill_name = models.CharField(verbose_name='habilidad', max_length=50)
     skill_icon = models.CharField(verbose_name='Icono Font Awesome',max_length=50)
+    
+    def __str__(self):
+        return self.skill_name
 
 
 class Workflow(models.Model):
