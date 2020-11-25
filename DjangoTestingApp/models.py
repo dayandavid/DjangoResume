@@ -21,7 +21,7 @@ class JobExperience(models.Model):
     company_name = models.CharField(max_length=50)
     company_description = models.TextField()
     start_date = models.DateField(auto_now=False, auto_now_add=False)
-    end_date = models.DateField(auto_now=False, auto_now_add=False, blank=True)
+    end_date = models.DateField(auto_now=False, auto_now_add=False, blank=True, null=True)
     current_company = models.BooleanField()
     
     def __str__(self):
