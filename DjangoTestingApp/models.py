@@ -97,4 +97,5 @@ class Workflow(models.Model):
     """
     A model that describes the workflows of the user
     """
-    workflow_name = models.CharField(max_length=50)
+    workflow_name = models.CharField(verbose_name='Flujo de trabajo', max_length=50)
+    
