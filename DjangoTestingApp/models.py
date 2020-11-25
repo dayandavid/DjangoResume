@@ -99,3 +99,5 @@ class Workflow(models.Model):
     """
     workflow_name = models.CharField(verbose_name='Flujo de trabajo', max_length=50)
     
+    def __str__(self):
+        return self.workflow_name
