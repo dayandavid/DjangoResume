@@ -98,12 +98,9 @@
                 <h2 class="mb-5">Habilidades</h2>
                 <div class="subheading mb-3">Lenguajes de programacion y herramientas</div>
                 <ul class="list-inline dev-icons">
-                    <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-angular"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-npm"></i></li>
+                    {% for skill in skills %}
+                        <li class="list-inline-item"><i class="fab {{skill.skill_icon}}"></i></li>
+                    {% endfor %}
                 </ul>
                 <div class="subheading mb-3">Flujo de Trabajo</div>
                 <ul class="fa-ul mb-0">
