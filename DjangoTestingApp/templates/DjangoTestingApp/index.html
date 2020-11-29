@@ -17,7 +17,11 @@
     <script src="{% static 'DjangoTestingApp/js/popper.js' %}" defer></script>
     <script src="{% static 'DjangoTestingApp/js/bootstrap.js' %}" defer></script>
     <script src="{% static 'DjangoTestingApp/js/jquery.easing.js' %}" defer></script>
+    <script src="{% static 'DjangoTestingApp/js/gsap.min.js' %}" defer></script>
+    <script src="{% static 'DjangoTestingApp/js/gsap.min.js.map' %}" defer></script>
+    <script src="{% static 'DjangoTestingApp/js/startbootstrap.js' %}" defer></script>
     <script src="{% static 'DjangoTestingApp/js/scripts.js' %}" defer></script>
+    
 
     <title>Curriculum Dayan</title>
 </head>
@@ -46,16 +50,16 @@
         <!--About-->
         <section class="resume-section" id="about">
             <div class="resume-section-content">
-                <h1 class="mb-0">
-                    {{profile.first_name}}
-                    <span class="text-primary">{{profile.last_name}}</span>
+                <h1 class="mb-0 profile-item" id="username">
+                    <span id="firstname">{{profile.first_name}}</span>
+                    <span id='lastname' class="text-primary">{{profile.last_name}}</span>
                 </h1>
-                <div class="subheading mb-5">
+                <div class="subheading mb-5 profile-item" id="contactInformation">
                     {{profile.address}} · (+53) {{profile.phone_number}} ·
                     <a href="mailto:{{profile.email}}">{{profile.email}}</a>
                 </div>
-                <p class="lead mb-5">{{profile.description}}</p>
-                <div class="social-icons">
+                <p class="lead mb-5 profile-item" id="profileDescription">{{profile.description}}</p>
+                <div class="social-icons profile-item" id="socialNetworks">
                     <!--Social Links-->
                     {% for social in social_links %}
                         <a href="{{social.url}}" class="social-icon"><i class="fab {{social.icon}}"></i></a>
