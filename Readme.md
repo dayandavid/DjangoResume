@@ -11,6 +11,3 @@ i have to download all the used libs.
 - Django: 3.0.1
 
 - PostgreSQL: 9.5
-
-- GSAP: 3.5.1
-
